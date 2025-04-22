@@ -44,8 +44,14 @@ export class EmailService {
         Subject: 'Welcome to SoluteLabs...',
         HtmlBody: `
           <p>Hi ${name},</p>
-          <p>We welcome you to our team</p>
-          <p>Here is your accesstoken: ${token} </p>
+          <p>We welcome you to our team!</p>
+          <p>
+            <a href="${token}" style="padding: 12px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; display: inline-block;">
+              Access Link
+            </a>
+          </p>
+          <p>If the button above doesn’t work, please copy and paste the following link into your browser:</p>
+          <p>${token}</p>
         `,
         MessageStream: 'outbound',
       });
